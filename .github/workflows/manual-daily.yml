@@ -22,7 +22,7 @@ run: python build_search_index.py
 name: Dashboard
 run: python build_dashboard.py
 name: Commit content
-run: |if [ -n "$(git status --porcelain)" ]; then
+run: if [ -n $(git status --porcelain) ]; then
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
         git add -A
