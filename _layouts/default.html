@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+  <style>
+    :root{--bg:#ffffff;--text:#111;--muted:#666;--card:#f9f9f9;--border:#ddd;--link:#2a7ae2;--accent:#2a7ae2}
+    html[data-theme="dark"]{--bg:#0f1115;--text:#e6e6e6;--muted:#9aa4ad;--card:#151924;--border:#2b3440;--link:#8ab4f8;--accent:#5588ff}
+    body{background:var(--bg);color:var(--text)}
+    a{color:var(--link)}
+    header{border-bottom:2px solid var(--accent);padding-bottom:1em}
+    footer{color:var(--muted);border-top:1px solid var(--border);font-size:.85em}
+    hr{border-color:var(--border)}
+    nav a{color:var(--link)}
+    .theme-toggle{margin-left:.75rem;padding:.4rem .6rem;font-size:.9em;background:transparent;color:var(--text);border:1px solid var(--border);border-radius:6px;cursor:pointer}
+    .theme-toggle:hover{filter:brightness(1.1)}
+  </style>
+  {% if page.category == "cve" %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"{{ page.title | escape }}","datePublished":"{{ page.date }}","publisher":{"@type":"Organization","name":"{{ site.title }}"}}</script>
+  {% elsif page.category == "outage" %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Event","name":"{{ page.title | escape }}","startDate":"{{ page.date }}"}</script>
+  {% elsif page.category == "paper" %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ScholarlyArticle","headline":"{{ page.title | escape }}","datePublished":"{{ page.date }}"}</script>
+  {% elsif page.category == "advisory" %}
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"{{ page.title | escape }}","datePublished":"{{ page.date }}"}</script>
+  {% endif %}
+</head>
+<body>
+  <header>
+    <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+    <p>{{ site.description }}</p>
+    <nav style="font-size:.85em;display:flex;flex-wrap:wrap;gap:.5em">
+      <a href="{{ '/vendors/' | relative_url }}">Vendors</a> ·
+      <a href="{{ '/weekly/' | relative_url }}">Weekly</a> ·
+      <a href="{{ '/advisories/' | relative_url }}">Advisories</a> ·
+      <a href="{{ '/github/' | relative_url }}">GitHub</a> ·
+      <a href="{{ '/news/' | relative_url }}">News</a> ·
+      <a href="{{ '/jobs/' | relative_url }}">Jobs</a> ·
+      <a href="{{ '/k8s/' | relative_url }}">K8s</a> ·
+      <a href="{{ '/bugbounty/' | relative_url }}">BugBounty</a> ·
+      <a href="{{ '/podcasts/' | relative_url }}">Podcasts</a> ·
+      <a href="{{ '/pricing/' | relative_url }}">Pricing</a> ·
+      <a href="{{ '/ctf/' | relative_url }}">CTF</a> ·
+      <a href="{{ '/conf/' | relative_url }}">Conf</a> ·
+      <a href="{{ '/resources/' | relative_url }}">Resources</a> ·
+      <a href="{{ '/sponsor/' | relative_url }}">Sponsor</a> ·
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Basculer le thème">🌙</button>
+    </nav>
+  </header>
+  <main>
+    <div data-ea-publisher="YOUR_ETHICALADS_ID" data-ea-type="text" style="margin:1em 0"></div>
+    {{ content }}
+    <hr style="margin:2em 0">
+    <div data-ea-publisher="YOUR_ETHICALADS_ID" data-ea-type="image"></div>
+    <p style="font-size:.9em">
+      📬 Newsletter: <a href="https://YOUR-MAILERLITE-LINK">Abonnez-vous</a> ·
+      📢 Telegram: <a href="https://t.me/YOUR-CHANNEL">@your_channel</a>
+    </p>
+  </main>
+  <footer style="margin-top:3em;padding:1em 0;border-top:1px solid #ddd">
+    <small>© {{ "now" | date: "%Y" }} OpsIntel Network · 12 niches · 100% automatisé · Pubs & affiliés présents</small>
+  </footer>
+  <script>
+    (function(){
+      const root=document.documentElement,mql=window.matchMedia('(prefers-color-scheme: dark)'),btn=document.getElementById('theme-toggle');
+      const icon=m=>m==='dark'?'☀️':'🌙';
+      function setTheme(m,persist=true){root.setAttribute('data-theme',m);if(btn)btn.textContent=icon(m);if(persist)localStorage.setItem('theme',m);if(window.applyChartTheme)window.applyChartTheme(m)}
+      const saved=localStorage.getItem('theme');const mode=saved||(mql.matches?'dark':'light');setTheme(mode,false);
+      if(btn)btn.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
+      if(!saved)mql.addEventListener('change',e=>setTheme(e.matches?'dark':'light',false));
+    })();
+  </script>
+</body>
+</html>
