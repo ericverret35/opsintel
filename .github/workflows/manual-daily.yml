@@ -1,21 +1,21 @@
 name: Manual Daily (bootstrap)
 
-sur :
-workflow_dispatch :
+on:
+workflow_dispatch:
 
-permissions :
-contenu : écriture
+permissions:
+contents: write
 
-tâches :
-bootstrap :
-fonctionne sur : ubuntu-latest
-env :
-URL_BASE_DU_SITE : ${{ secrets.SITE_BASE_URL }}
-JETON_GITHUB : ${{ secrets.GITHUB_TOKEN }}
-étapes :
-- utilise : actions/checkout@v4
+jobs:
+bootstrap:
+runs-on: ubuntu-latest
+env:
+SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+steps:
+- uses: actions/checkout@v4
 
-texte
+text
 
   - uses: actions/setup-python@v5
     with:
