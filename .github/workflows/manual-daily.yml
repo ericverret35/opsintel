@@ -14,9 +14,6 @@ SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 steps:
 - uses: actions/checkout@v4
-
-text
-
   - uses: actions/setup-python@v5
     with:
       python-version: "3.11"
