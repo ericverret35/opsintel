@@ -1,11 +1,11 @@
 import json, yaml
 from pathlib import Path
 from datetime import datetime, timedelta, timezone
-from
+from collections import Counter
 
 def read_fm(path):
 t = path.read_text(encoding="utf-8").splitlines()
-if not t or t[0].strip()!="---":
+if not t or t[0].strip()!="---"):
 return {}
 fm=[]
 for ln in t[1:]:
@@ -121,7 +121,7 @@ stats = {
     "cve": {"total": cve["total"], "last_7d": cve["last_7d"], "last_30d": cve["last_30d"], "critical": cve["critical"], "high": cve["high"], "kev": cve["kev"], "weekly": cve["weekly"], "top_vendors": [{"name": v, "count": c} for v,c in vendor_counts.most_common(10)]},
     "outages": {"total": out["total"], "last_7d": out["last_7d"], "major": out["extra"], "by_vendor": [{"name": v, "count": c} for v,c in outages_by_vendor.most_common(10)]},
     "papers": {"total": pap["total"], "last_7d": pap["last_7d"]},
-    "advisories": {"total": adv["total"], "last_7d": adv["last_7d"], "critical": adv["critical"], "high": adv["high"], "by_ecosystem": [{"name": e, "count": c} for e,c in adv["by_attr"].most_common(10)]},
+    "advisories": {"total": adv["total"], "last_7d": adv["last_7d"], "critical": {"count": adv["critical"]}, "high": {"count": adv["high"]}, "by_ecosystem": [{"name": e, "count": c} for e,c in adv["by_attr"].most_common(10)]},
     "github": {"total": git["total"], "last_7d": git["last_7d"]},
     "news": {"total": news["total"], "last_7d": news["last_7d"]},
     "jobs": {"total": jobs["total"], "last_7d": jobs["last_7d"], "remote": jobs["extra"]},
