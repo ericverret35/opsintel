@@ -1,34 +1,83 @@
-name: Daily Sync (minimal)
+name: Daily Sync (12 niches)
 on:
-schedule:
-
-cron: "0 6 * * *"
-workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
 permissions:
-contents: write
+  contents: write
 jobs:
-daily:
-runs-on: ubuntu-latest
-steps:
-uses: actions/checkout@v4
-uses: actions/setup-python@v5
-with:
-python-version: "3.11"
-run: pip install -r requirements.txt
-name: Fetch jobs
-run: python fetch_jobs.py
-name: Fetch pricing
-run: python fetch_pricing.py
-name: Build search index
-run: python build_search_index.py
-name: Commit
-run: |
-if [ -n "$(git status --porcelain)" ]; then
-git config user.name "github-actions[bot]"
-git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-git add -A
-git commit -m "chore: daily minimal sync"
-git push
-else
-echo "No changes"
-fi
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: CVE
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
+        run: python fetch_cves.py
+      - name: arXiv
+        run: python fetch_arxiv.py
+      - name: OSV
+        run: python fetch_osv.py
+      - name: KEV flags
+        run: python update_kev_flags.py
+      - name: GitHub Trending
+        run: python fetch_github_trending.py
+      - name: Tech News
+        run: python fetch_tech_news.py
+      - name: Jobs
+        run: python fetch_jobs.py
+      - name: K8s releases
+        run: python fetch_k8s_releases.py
+      - name: Bug Bounty
+        run: python fetch_bugbounty.py
+      - name: Podcasts
+        run: python fetch_podcasts.py
+      - name: Pricing
+        run: python fetch_pricing.py
+      - name: CTF
+        run: python fetch_ctf.py
+      - name: Conferences
+        run: python fetch_conferences.py
+      - name: Vendor pages
+        run: python build_vendor_pages.py
+      - name: Weekly digest
+        run: python build_weekly_digests.py
+      - name: Advisories weekly
+        run: python build_advisories_weekly.py
+      - name: Search index
+        run: python build_search_index.py
+      - name: JSON API
+        run: python build_json_feeds.py
+      - name: Dashboard
+        run: python build_dashboard.py
+      - name: Commit
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: daily sync $(date -u +'%Y-%m-%d')"
+            git push
+          else
+            echo "No changes"
+          fi
+      - name: Alerts
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+        run: python post_alerts.py --cve 26 --jobs 26
+      - name: Social
+        env:
+          MASTO_BASE: ${{ secrets.MASTO_BASE }}
+          MASTO_TOKEN: ${{ secrets.MASTO_TOKEN }}
+          BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
+          BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
+          SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
+        run: python post_social.py

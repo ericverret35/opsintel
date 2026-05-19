@@ -1,7 +1,7 @@
 title: OpsIntel Network
 description: Your automated intelligence hub — CVE, Incidents, AI Papers, Advisories, Jobs, Pricing, Conferences, and more.
-url: https://ericverret35.github.iohttps://<ericverret35>.github.io
-baseurl: /opsintel/opsintel
+url: https://ericverret35.github.io
+baseurl: /opsintel
 theme: minima
 plugins:
   - jekyll-feed
