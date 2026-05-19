@@ -1,11 +1,7 @@
-name: Manual Daily (bootstrap)
-
 on:
 workflow_dispatch:
-
 permissions:
 contents: write
-
 jobs:
 bootstrap:
 runs-on: ubuntu-latest
@@ -13,20 +9,19 @@ env:
 SITE_BASE_URL: ${{ secrets.SITE_BASE_URL }}
 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 steps:
-- uses:actions/checkout@v4
-- uses:actions/setup-python@v5
-with:python-version:3.14
-- name: Install deps
+uses: actions/checkout@v4  - uses: actions/setup-python@v5
+with:python-version: "3.11"
+name: Install deps
     run: pip install -r requirements.txt
-- name: Fetch jobs
+name: Fetch jobs
     run: python fetch_jobs.py
-- name: Fetch pricing
+name: Fetch pricing
     run: python fetch_pricing.py
-- name: Build search index
+name: Build search index
     run: python build_search_index.py
-- name: Dashboard
+name: Dashboard
     run: python build_dashboard.py
-- name: Commit content
+name: Commit content
     run: |
       if [ -n "$(git status --porcelain)" ]; then
         git config user.name "github-actions[bot]"
