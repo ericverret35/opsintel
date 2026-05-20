@@ -55,3 +55,5 @@ defaults:
     values: { layout: post, category: conferences }
 feed:
   path: feed.xml
+stripe_payment_link: "https://buy.stripe.com/fZudR91sx3Q3dMWeG13ZK00"
+contact_email: "eric35@hotmail.ca"

@@ -1,0 +1,48 @@
+name: Poster une offre d'emploi (sponsorisée)
+description: Envoyez les infos de votre offre (publication sous 24–48h).
+title: "[JOB] {{company}} — {{role}} ({{location}})"
+labels: ["job"]
+body:
+
+type: input
+id: company
+attributes:
+label: Entreprise
+placeholder: Acme Corp
+validations:
+required: true
+type: input
+id: role
+attributes:
+label: Poste
+placeholder: Security Engineer
+validations:
+required: true
+type: input
+id: location
+attributes:
+label: Localisation
+placeholder: Remote/Montréal/Paris
+validations:
+required: true
+type: input
+id: apply_url
+attributes:
+label: Lien pour postuler
+placeholder: https://...
+validations:
+required: true
+type: textarea
+id: description
+attributes:
+label: Description courte
+placeholder: Missions, stack, must-have, nice-to-have
+validations:
+required: true
+type: checkboxes
+id: paid
+attributes:
+label: Paiement
+options:
+- label: "J'ai payé via Stripe (ou je joins le reçu)."
+required: true

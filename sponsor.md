@@ -13,3 +13,13 @@ permalink: /sponsor/
 - **Post dédié** (outil dev/sec/IA): **€1 000–€2 000**
 
 Réserver: [Tally](https://tally.so/r/YOUR-FORM) · sponsor@your-domain.com
+
+layout: default
+title: Devenir sponsor
+permalink: /sponsor/
+OpsIntel publie une veille sécu/devops (CVEs, releases, podcasts, jobs, etc.).
+
+Soutenir / sponsoriser:
+
+Stripe: {{ site.stripe_payment_link }}
+Contact: {{ site.contact_email }}
