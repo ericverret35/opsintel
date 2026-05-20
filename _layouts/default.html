@@ -30,6 +30,10 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"{{ page.title | escape }}","datePublished":"{{ page.date }}"}</script>
   {% endif %}
 </head>
+<!-- monetization:top -->
+{% if site.stripe_payment_link %}
+
+<div class="sponsor-cta" style="margin:1rem 0;padding:0.75rem;border:1px solid #eee;background:#fafafa;text-align:center;"> <strong>Soutenez OpsIntel</strong> — <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener">Sponsoriser (Stripe)</a> — <a href="/sponsor/">Infos</a> </div> {% endif %}
 <body>
   <header>
     <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
