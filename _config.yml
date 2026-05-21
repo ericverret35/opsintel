@@ -4,5 +4,5 @@ url: https://ericverret35.github.io
 baseurl: /opsintel
 stripe_payment_link: https://buy.stripe.com/fZudR91sx3Q3dMWeG13ZK00
 contact_email: eric35@hotmail.ca
-ethicalads_publisher: ""
-newsletter_url: ""
+ethicalads_publisher:
+newsletter_url:
