@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+﻿name: Build and deploy (minimal)
+on:
+push:
+branches: [main]
+workflow_dispatch:
+=======
 name: Build and deploy (minimal)
 
 on:
@@ -5,6 +12,7 @@ on:
     branches: [main]
   workflow_dispatch:
 
+>>>>>>> 5c8f3882e72598d55ae18c31e070c1af4ed2e6e2
 permissions:
   contents: read
   pages: write
@@ -15,6 +23,38 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+<<<<<<< HEAD
+build:
+runs-on: ubuntu-latest
+steps:
+- uses: actions/checkout@v4
+ - name: Setup Ruby
+    uses: ruby/setup-ruby@v1
+    with:
+      ruby-version: "3.2"
+      bundler-cache: true
+
+  - name: Configure Pages
+    id: pages
+    uses: actions/configure-pages@v5
+
+  - name: Build Jekyll
+    run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+  - name: Upload artifact
+    uses: actions/upload-pages-artifact@v3
+    with:
+      path: _site
+deploy:
+needs: build
+environment:
+name: github-pages
+url: ${{ steps.deployment.outputs.page_url }}
+runs-on: ubuntu-latest
+steps:
+- id: deployment
+uses: actions/deploy-pages@v4
+=======
   build:
     runs-on: ubuntu-latest
     steps:
@@ -47,3 +87,4 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+>>>>>>> 5c8f3882e72598d55ae18c31e070c1af4ed2e6e2

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ericverret35.github.io/opsintel/sitemap.xml

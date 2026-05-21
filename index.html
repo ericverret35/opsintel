@@ -41,9 +41,7 @@ layout: none
     .badge.remote{background:#28a745}
     footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--border);font-size:.85em;color:var(--muted)}
   </style>
-</head>
-<body>
-  <header>
+</head> <body> <!-- monetization:top --> {% if site.stripe_payment_link %} <div class="sponsor-cta" style="margin:1rem 0;padding:0.75rem;border:1px solid #eee;background:#fafafa;text-align:center;"> <strong>Soutenez OpsIntel</strong> — <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener">Sponsoriser (Stripe)</a> — <a href="/sponsor/">Infos</a> </div> {% endif %}  <header>
     <h1>📊 OpsIntel Dashboard</h1>
     <p>12 niches d'intelligence opérationnelle — 100% automatisé</p>
     <nav>
