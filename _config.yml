@@ -1,18 +1,11 @@
 title: "OpsIntel"
 description: "Security/devops automated: CVEs, K8s releases, GitHub trending, jobs, podcasts, etc."
-url: " https://ericverret35.github.io "
+url: "https://ericverret35.github.io"
 baseurl: "/opsintel"
 timezone: "UTC"
-
 plugins:
-
 jekyll-seo-tag
 jekyll-sitemap
 jekyll-feed
 stripe_payment_link: "https://buy.stripe.com/fZudR91sx3Q3dMWeG13ZK00"
 contact_email: "eric35@hotmail.ca"
-
-Leave blank if you don't have these integrations yet.
-ethicalads_publisher: ""
-newsletter_url: ""
-telegram_url: ""
