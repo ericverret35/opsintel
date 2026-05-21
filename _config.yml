@@ -1,60 +1,18 @@
-title: OpsIntel
-description:Automated security/DevOps monitoring: CVEs, Kubernetes releases, GitHub trending, jobs, podcasts, etc
-url: https://ericverret35.github.io
-baseurl: /opsintel
-theme: minima
+title: "OpsIntel"
+description: "Security/devops automated: CVEs, K8s releases, GitHub trending, jobs, podcasts, etc."
+url: " https://ericverret35.github.io "
+baseurl: "/opsintel"
+timezone: "UTC"
+
 plugins:
-  - jekyll-seo-tag
-  - jekyll-feed
-  - jekyll-sitemap
-  markdown: kramdown
-kramdown:
-  input: GFM
-google_analytics: 
-collections:
-  cve: { output: true, permalink: /cve/:name/ }
-  outages: { output: true, permalink: /outages/:name/ }
-  papers: { output: true, permalink: /ai/:name/ }
-  advisories: { output: true, permalink: /advisories/:name/ }
-  github_trending: { output: true, permalink: /github/:name/ }
-  tech_news: { output: true, permalink: /news/:name/ }
-  jobs: { output: true, permalink: /jobs/:name/ }
-  k8s_releases: { output: true, permalink: /k8s/:name/ }
-  bugbounty: { output: true, permalink: /bugbounty/:name/ }
-  podcasts: { output: true, permalink: /podcasts/:name/ }
-  pricing: { output: true, permalink: /pricing/:name/ }
-  ctf: { output: true, permalink: /ctf/:name/ }
-  conferences: { output: true, permalink: /conf/:name/ }
-defaults:
-  - scope: { path: "" }
-    values: { layout: default }
-  - scope: { path: "cve" }
-    values: { layout: post, category: cve }
-  - scope: { path: "outages" }
-    values: { layout: post, category: outage }
-  - scope: { path: "papers" }
-    values: { layout: post, category: paper }
-  - scope: { path: "advisories" }
-    values: { layout: post, category: advisory }
-  - scope: { path: "github_trending" }
-    values: { layout: post, category: github-trending }
-  - scope: { path: "tech_news" }
-    values: { layout: post, category: tech-news }
-  - scope: { path: "jobs" }
-    values: { layout: post, category: jobs }
-  - scope: { path: "k8s_releases" }
-    values: { layout: post, category: k8s-releases }
-  - scope: { path: "bugbounty" }
-    values: { layout: post, category: bugbounty }
-  - scope: { path: "podcasts" }
-    values: { layout: post, category: podcasts }
-  - scope: { path: "pricing" }
-    values: { layout: post, category: pricing }
-  - scope: { path: "ctf" }
-    values: { layout: post, category: ctf }
-  - scope: { path: "conferences" }
-    values: { layout: post, category: conferences }
-feed:
-  path: feed.xml
+
+jekyll-seo-tag
+jekyll-sitemap
+jekyll-feed
 stripe_payment_link: "https://buy.stripe.com/fZudR91sx3Q3dMWeG13ZK00"
 contact_email: "eric35@hotmail.ca"
+
+Leave blank if you don't have these integrations yet.
+ethicalads_publisher: ""
+newsletter_url: ""
+telegram_url: ""
