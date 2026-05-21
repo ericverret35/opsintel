@@ -3,7 +3,9 @@ description: "Security/devops automated: CVEs, K8s releases, GitHub trending, jo
 url: "https://ericverret35.github.io"
 baseurl: "/opsintel"
 timezone: "UTC"
+
 plugins:
+
 jekyll-seo-tag
 jekyll-sitemap
 jekyll-feed
