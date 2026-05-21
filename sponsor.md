@@ -1,25 +1,8 @@
----
-title: Sponsoriser OpsIntel
-layout: default
-permalink: /sponsor/
----
-# Sponsoriser OpsIntel
-
-**12 niches** · Audience B2B dev/secops/infra · Contenu rafraîchi quotidiennement
-
-## Formats
-- **Newsletter hebdo** (bannière + 50–80 mots): **€500–€1 500**
-- **Sponsoring site** (header/footer): **€800–€2 500/mois**
-- **Post dédié** (outil dev/sec/IA): **€1 000–€2 000**
-
-Réserver: [Tally](https://tally.so/r/YOUR-FORM) · sponsor@your-domain.com
-
 layout: default
 title: Devenir sponsor
 permalink: /sponsor/
-OpsIntel publie une veille sécu/devops (CVEs, releases, podcasts, jobs, etc.).
+<h2>Devenir sponsor</h2> <p>OpsIntel: veille sécu/devops (CVEs, K8s, GitHub trending, jobs…).</p><p><strong>Offre</strong> : encart site + mention hebdo (à partir de 100 CAD/semaine).</p><p> <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener" style="display:inline-block;background:#0a66ff;color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:600;"> Sponsoriser via Stripe </a> </p><p>Questions : {{ site.contact_email }}</p>
+Étape 3 — Bandeau “Sponsoriser” visible partout
+Tu as déjà le bloc dans _layouts/default.html. Assure-toi qu’il est bien juste après <body> (c’est déjà corrigé chez toi). Si tu veux le bouton aussi sur la home et que index.html n’utilise pas le layout, ajoute ce bloc juste après <body> dans index.html et Commit:
 
-Soutenir / sponsoriser:
-
-Stripe: {{ site.stripe_payment_link }}
-Contact: {{ site.contact_email }}
+<div style="margin:1rem 0;text-align:center;"> <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener" style="display:inline-block;background:#0a66ff;color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:600;"> Sponsoriser via Stripe </a> <span style="margin-left:.75rem;"><a href="/sponsor/">Infos</a></span> </div>
