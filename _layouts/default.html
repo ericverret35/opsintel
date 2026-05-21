@@ -35,6 +35,10 @@
 
 <div class="sponsor-cta" style="margin:1rem 0;padding:0.75rem;border:1px solid #eee;background:#fafafa;text-align:center;"> <strong>Soutenez OpsIntel</strong> — <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener">Sponsoriser (Stripe)</a> — <a href="/sponsor/">Infos</a> </div> {% endif %}
 <body>
+<!-- monetization:top -->
+{% if site.stripe_payment_link %}
+
+<div style="background:#fff8e1;border-bottom:1px solid #eee;padding:.6rem 1rem;text-align:center;"> <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener" style="display:inline-block;background:#0a66ff;color:#fff;padding:.45rem .9rem;border-radius:6px;text-decoration:none;font-weight:600;"> Sponsoriser via Stripe </a> <span style="margin-left:.75rem;"><a href="/sponsor/">Infos</a></span> </div> {% endif %}
   <header>
     <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
     <p>{{ site.description }}</p>
