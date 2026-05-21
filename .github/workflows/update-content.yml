@@ -1,31 +1,31 @@
-name: Update content (daily + manual)
+name Update content (daily + manual)
 
-on:
+on
 workflow_dispatch:
 schedule:
-- cron: "0 6 * * *"
+ cron "0 6 * * *"
 
-permissions:
-contents: write
+permissions
+contents write
 
-jobs:
-update:
-runs-on: ubuntu-latest
-steps:
-- name: Checkout
-uses: actions/checkout@v4
-  - name: Setup Python
-    uses: actions/setup-python@v5
-    with:
+jobs
+update
+runs-on ubuntu-latest
+steps
+ name Checkout
+uses actions/checkout@v4
+   name Setup Python
+    uses actions/setup-python@v5
+    with
       python-version: "3.11"
       cache: "pip"
 
-  - name: Install Python deps
-    run: |
+   name Install Python deps
+    run |
       python -m pip install --upgrade pip
       if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-  - name: Fetch data
+   name: Fetch data
     shell: bash
     run: |
       set -Eeuo pipefail
@@ -48,9 +48,9 @@ uses: actions/checkout@v4
         if [ -f "$s" ]; then python "$s" || echo "warn: $s failed"; fi
       done
 
-  - name: Build content
+   name Build content
     shell: bash
-    run: |
+    run |
       set -Eeuo pipefail
       for s in \
         build_advisories_weekly.py \
@@ -63,13 +63,13 @@ uses: actions/checkout@v4
         if [ -f "$s" ]; then python "$s" || echo "warn: $s failed"; fi
       done
 
-  - name: Commit & push changes
-    env:
+   name Commit & push changes
+    env
       GIT_AUTHOR_NAME: github-actions[bot]
       GIT_AUTHOR_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
       GIT_COMMITTER_NAME: github-actions[bot]
       GIT_COMMITTER_EMAIL: 41898282+github-actions[bot]@users.noreply.github.com
-    run: |
+    run |
       git config user.name "$GIT_AUTHOR_NAME"
       git config user.email "$GIT_AUTHOR_EMAIL"
       git add -A
