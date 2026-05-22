@@ -1,179 +1,44 @@
 ---
-layout: none
+layout: default
+title: OpsIntel
 ---
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title>OpsIntel Dashboard — 12 niches d'intelligence automatisée</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dashboard OpsIntel — CVE, Incidents, AI, Advisories, GitHub, News, Jobs, K8s, BugBounty, Podcasts, Pricing, CTF, Conf">
-  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <script async src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
-  <style>
-    :root{--bg:#ffffff;--text:#111;--muted:#666;--card:#f9f9f9;--border:#ddd;--link:#2a7ae2;--accent:#2a7ae2}
-    html[data-theme="dark"]{--bg:#0f1115;--text:#e6e6e6;--muted:#9aa4ad;--card:#151924;--border:#2b3440;--link:#8ab4f8;--accent:#5588ff}
-    body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif}
-    a{color:var(--link)}
-    header{border-bottom:2px solid var(--accent);padding-bottom:1em;margin-bottom:2em}
-    header h1{margin:0;font-size:2em}
-    header p{margin:.5em 0 0;color:var(--muted)}
-    nav{margin-top:1em;font-size:.85em;display:flex;flex-wrap:wrap;gap:.5em}
-    nav a{margin-right:.75em;color:var(--link)}
-    .theme-toggle{margin-left:.75rem;padding:.4rem .6rem;font-size:.9em;background:transparent;color:var(--text);border:1px solid var(--border);border-radius:6px;cursor:pointer}
-    .theme-toggle:hover{filter:brightness(1.1)}
-    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.75em;margin:2em 0}
-    .stat-card{background:var(--card);border-left:4px solid var(--accent);padding:.85em;border-radius:4px}
-    .stat-card h3{margin:0 0 .4em;font-size:.8em;text-transform:uppercase;color:var(--muted)}
-    .stat-card .value{font-size:1.8em;font-weight:bold;color:var(--accent)}
-    .stat-card .sub{font-size:.8em;color:var(--muted);margin-top:.2em}
-    .chart-container{margin:2em 0;position:relative;height:280px;background:transparent}
-    .chart-row{display:grid;grid-template-columns:1fr 1fr;gap:2em;margin:2em 0}
-    @media(max-width:768px){.chart-row{grid-template-columns:1fr}}
-    .highlights{margin:2em 0}
-    .highlights h2{border-bottom:2px solid var(--border);padding-bottom:.5em;font-size:1.2em}
-    .highlights ul{padding-left:1.5em}
-    .highlights li{margin:.4em 0;font-size:.95em}
-    .badge{display:inline-block;padding:.15em .4em;border-radius:3px;font-size:.7em;font-weight:bold;color:#fff;margin-right:.4em}
-    .badge.critical{background:#d00}
-    .badge.kev{background:#dc3545}
-    .badge.remote{background:#28a745}
-    footer{margin-top:3em;padding-top:1em;border-top:1px solid var(--border);font-size:.85em;color:var(--muted)}
-  </style>
-</head>
-<body> 
-  <div style="margin:1rem 0;text-align:center;"> <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener" style="display:inline-block;background:#0a66ff;color:#fff;padding:.6rem 1rem;border-radius:6px;text-decoration:none;font-weight:600;"> Sponsoriser via Stripe </a> <span style="margin-left:.75rem;"><a href="/sponsor/">Infos</a></span> </div>
-  <header>
-    <h1>📊 OpsIntel Dashboard</h1>
-    <p>12 niches d'intelligence opérationnelle — 100% automatisé</p>
-    <nav>
-      <a href="{{ '/vendors/' | relative_url }}">Vendors</a> ·
-      <a href="{{ '/weekly/' | relative_url }}">Weekly</a> ·
-      <a href="{{ '/advisories/' | relative_url }}">Advisories</a> ·
-      <a href="{{ '/github/' | relative_url }}">GitHub</a> ·
-      <a href="{{ '/news/' | relative_url }}">News</a> ·
-      <a href="{{ '/jobs/' | relative_url }}">Jobs</a> ·
-      <a href="{{ '/k8s/' | relative_url }}">K8s</a> ·
-      <a href="{{ '/bugbounty/' | relative_url }}">BugBounty</a> ·
-      <a href="{{ '/podcasts/' | relative_url }}">Podcasts</a> ·
-      <a href="{{ '/pricing/' | relative_url }}">Pricing</a> ·
-      <a href="{{ '/ctf/' | relative_url }}">CTF</a> ·
-      <a href="{{ '/conf/' | relative_url }}">Conf</a> ·
-      <a href="{{ '/resources/' | relative_url }}">Resources</a> ·
-      <a href="{{ '/sponsor/' | relative_url }}">Sponsor</a> ·
-      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Basculer le thème">🌙</button>
-    </nav>
-  </header>
-  <main>
-    <div class="stats-grid" id="stats-cards">
-      <div class="stat-card"><h3>🔐 CVE</h3><div class="value" id="cve-total">—</div><div class="sub"><span id="cve-7d">—</span> 7j · <span id="cve-kev">—</span> KEV</div></div>
-      <div class="stat-card"><h3>🚨 Outages</h3><div class="value" id="outages-total">—</div><div class="sub"><span id="outages-7d">—</span> 7j · <span id="outages-major">—</span> major</div></div>
-      <div class="stat-card"><h3>🤖 AI Papers</h3><div class="value" id="papers-total">—</div><div class="sub"><span id="papers-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>🛡️ Advisories</h3><div class="value" id="adv-total">—</div><div class="sub"><span id="adv-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>🐙 GitHub Trending</h3><div class="value" id="github-total">—</div><div class="sub"><span id="github-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>📰 Tech News</h3><div class="value" id="news-total">—</div><div class="sub"><span id="news-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>💼 Dev Jobs</h3><div class="value" id="jobs-total">—</div><div class="sub"><span id="jobs-7d">—</span> 7j · <span id="jobs-remote">—</span> remote</div></div>
-      <div class="stat-card"><h3>☸️ K8s Releases</h3><div class="value" id="k8s-total">—</div><div class="sub"><span id="k8s-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>📡 Podcasts</h3><div class="value" id="podcasts-total">—</div><div class="sub"><span id="podcasts-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>💰 Pricing</h3><div class="value" id="pricing-total">—</div><div class="sub"><span id="pricing-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>🏴 CTF</h3><div class="value" id="ctf-total">—</div><div class="sub"><span id="ctf-7d">—</span> 7j</div></div>
-      <div class="stat-card"><h3>📅 Conferences</h3><div class="value" id="conf-total">—</div><div class="sub"><span id="conf-upcoming">—</span> à venir</div></div>
-    </div>
-    <section><h2>CVE Trends (12 semaines)</h2><div class="chart-container"><canvas id="cveWeeklyChart"></canvas></div></section>
-    <div class="chart-row">
-      <section><h2>CVE par sévérité</h2><div class="chart-container" style="height:230px"><canvas id="cveSeverityChart"></canvas></div></section>
-      <section><h2>Top 5 Vendors</h2><div class="chart-container" style="height:230px"><canvas id="vendorsChart"></canvas></div></section>
-    </div>
-    <div class="chart-row">
-      <section><h2>Advisories par écosystème</h2><div class="chart-container" style="height:230px"><canvas id="advisoriesEcoChart"></canvas></div></section>
-      <section><h2>Incidents par service</h2><div class="chart-container" style="height:230px"><canvas id="outagesVendorChart"></canvas></div></section>
-    </div>
-    <section class="highlights">
-      <h2>🔥 Highlights récents</h2>
-      <h3>CVE critiques/KEV (7j)</h3><ul id="highlights-cve"><li>Chargement...</li></ul>
-      <h3>Jobs remote (7j)</h3><ul id="highlights-jobs"><li>Chargement...</li></ul>
-      <h3>AI Papers (7j)</h3><ul id="highlights-papers"><li>Chargement...</li></ul>
-    </section>
-    <section style="margin-top:3em"><h2>🔎 Recherche globale</h2>
-      <input id="q" type="search" placeholder="CVE, vendor, job, tool, paper..." style="width:100%;max-width:600px;padding:.7em;font-size:1em;border:1px solid #ccc;border-radius:4px">
-      <ul id="results" style="margin-top:1em"></ul>
-    </section>
-    <div data-ea-publisher="YOUR_ETHICALADS_ID" data-ea-type="image" style="margin:1em 0"></div>
-  </main>
-  <footer>
-    <p>© {{ "now" | date: "%Y" }} OpsIntel Network · 12 niches · Mise à jour: <span id="last-update">—</span></p>
-    <p><small>Pubs & affiliés · <a href="{{ '/sponsor/' | relative_url }}">Sponsoriser</a></small></p>
-  </footer>
-  <script src="https://unpkg.com/lunr/lunr.js"></script>
-  <script>
-  window.applyChartTheme=function(mode){
-    const isDark=(mode==='dark');
-    const THEME={text:isDark?'#eaeaea':'#111',grid:isDark?'rgba(255,255,255,0.12)':'rgba(0,0,0,0.08)'};
-    if(window.Chart&&Chart.defaults){Chart.defaults.color=THEME.text;Chart.defaults.borderColor=THEME.grid}
-    document.querySelectorAll('canvas').forEach(cv=>{
-      const ch=window.Chart&&Chart.getChart?Chart.getChart(cv):null;if(!ch)return;
-      const o=ch.options||{};
-      if(o.scales){for(const k in o.scales){const s=o.scales[k];if(s.ticks)s.ticks.color=THEME.text;if(s.grid)s.grid.color=THEME.grid}}
-      if(o.plugins&&o.plugins.legend&&o.plugins.legend.labels)o.plugins.legend.labels.color=THEME.text;
-      ch.update('none');
-    });
-  };
-  (function(){
-    const root=document.documentElement,mql=window.matchMedia('(prefers-color-scheme: dark)'),btn=document.getElementById('theme-toggle');
-    const icon=m=>m==='dark'?'☀️':'🌙';
-    function setTheme(m,persist=true){root.setAttribute('data-theme',m);if(btn)btn.textContent=icon(m);if(persist)localStorage.setItem('theme',m);if(window.applyChartTheme)window.applyChartTheme(m)}
-    const saved=localStorage.getItem('theme');const mode=saved||(mql.matches?'dark':'light');setTheme(mode,false);
-    if(btn)btn.addEventListener('click',()=>setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark'));
-    if(!saved)mql.addEventListener('change',e=>setTheme(e.matches?'dark':'light',false));
-    setTimeout(()=>window.applyChartTheme(root.getAttribute('data-theme')||'light'),400);
-  })();
-  </script>
-  <script>
-  (async function(){
-    const dash=await(await fetch("{{ '/assets/dashboard.json' | relative_url }}")).json();
-    const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
-    set('cve-total',dash.cve.total.toLocaleString());set('cve-7d',dash.cve.last_7d);set('cve-kev',dash.cve.kev);
-    set('outages-total',dash.outages.total.toLocaleString());set('outages-7d',dash.outages.last_7d);set('outages-major',dash.outages.major);
-    set('papers-total',dash.papers.total.toLocaleString());set('papers-7d',dash.papers.last_7d);
-    set('adv-total',dash.advisories.total.toLocaleString());set('adv-7d',dash.advisories.last_7d);
-    set('github-total',dash.github.total.toLocaleString());set('github-7d',dash.github.last_7d);
-    set('news-total',dash.news.total.toLocaleString());set('news-7d',dash.news.last_7d);
-    set('jobs-total',dash.jobs.total.toLocaleString());set('jobs-7d',dash.jobs.last_7d);set('jobs-remote',dash.jobs.remote || 0);
-    set('k8s-total',dash.k8s.total.toLocaleString());set('k8s-7d',dash.k8s.last_7d);
-    set('podcasts-total',dash.podcasts.total.toLocaleString());set('podcasts-7d',dash.podcasts.last_7d);
-    set('pricing-total',dash.pricing.total.toLocaleString());set('pricing-7d',dash.pricing.last_7d);
-    set('ctf-total',dash.ctf.total.toLocaleString());set('ctf-7d',dash.ctf.last_7d);
-    set('conf-total',dash.conferences.total.toLocaleString());set('conf-upcoming',dash.conferences.upcoming || 0);
-    document.getElementById('last-update').textContent=new Date(dash.updated).toLocaleString('fr-FR');
-    const ct=document.documentElement.getAttribute('data-theme')||'light';
-    if(window.Chart&&Chart.defaults){if(ct==='dark'){Chart.defaults.color='#eaeaea';Chart.defaults.borderColor='rgba(255,255,255,0.12)'}else{Chart.defaults.color='#111';Chart.defaults.borderColor='rgba(0,0,0,0.08)'}}
-    new Chart(document.getElementById('cveWeeklyChart'),{type:'line',data:{labels:dash.cve.weekly.labels,datasets:[{label:'CVE/semaine',data:dash.cve.weekly.data,borderColor:'#2a7ae2',backgroundColor:'rgba(42,122,226,0.1)',tension:.3,fill:true}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}}}});
-    new Chart(document.getElementById('cveSeverityChart'),{type:'doughnut',data:{labels:['Critical','High','Autres'],datasets:[{data:[dash.cve.critical,dash.cve.high,dash.cve.total-dash.cve.critical-dash.cve.high],backgroundColor:['#d00','#f60','#ddd']}]},options:{responsive:true,maintainAspectRatio:false}});
-    new Chart(document.getElementById('vendorsChart'),{type:'bar',data:{labels:dash.cve.top_vendors.slice(0,5).map(v=>v.name),datasets:[{label:'CVE 30j',data:dash.cve.top_vendors.slice(0,5).map(v=>v.count),backgroundColor:'#2a7ae2'}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}}}});
-    new Chart(document.getElementById('advisoriesEcoChart'),{type:'pie',data:{labels:dash.advisories.by_ecosystem.slice(0,6).map(e=>e.name),datasets:[{data:dash.advisories.by_ecosystem.slice(0,6).map(e=>e.count),backgroundColor:['#e74c3c','#3498db','#2ecc71','#f39c12','#9b59b6','#1abc9c']}]},options:{responsive:true,maintainAspectRatio:false}});
-    new Chart(document.getElementById('outagesVendorChart'),{type:'bar',data:{labels:dash.outages.by_vendor.slice(0,5).map(v=>v.name),datasets:[{label:'Incidents',data:dash.outages.by_vendor.slice(0,5).map(v=>v.count),backgroundColor:'#f60'}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}}}});
-    const cveList=document.getElementById('highlights-cve'),jobsList=document.getElementById('highlights-jobs'),papersList=document.getElementById('highlights-papers');
-    {% assign recent_cves=site.cve | sort:"date" | reverse %}
-    const cves=[{% for p in recent_cves limit:10 %}{title:"{{ p.title | escape }}",url:"{{ p.url | relative_url }}",sev:"{{ p.severity }}",kev:{{ p.kev | default:false }},date:"{{ p.date }}"}{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const now=new Date(),day7=new Date(now-7*24*60*60*1000);
-    const critCves=cves.filter(c=>{const d=new Date(c.date);return(c.sev==='CRITICAL'||c.kev)&&d>=day7}).slice(0,7);
-    cveList.innerHTML=critCves.length?critCves.map(c=>{let badges=c.sev==='CRITICAL'?'<span class="badge critical">CRIT</span>':'';if(c.kev)badges+='<span class="badge kev">KEV</span>';return`<li>${badges}<a href="${c.url}">${c.title}</a> <small>(${c.date})</small></li>`}).join(''):'<li>Aucune CVE critique/KEV récente</li>';
-    {% assign recent_jobs=site.jobs | sort:"date" | reverse %}
-    const jobs=[{% for p in recent_jobs limit:20 %}{title:"{{ p.title | escape }}",url:"{{ p.url | relative_url }}",company:"{{ p.company | escape }}",remote:{{ p.remote | default:false }},date:"{{ p.date }}"}{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const remoteJobs=jobs.filter(j=>{const d=new Date(j.date);return j.remote&&d>=day7}).slice(0,7);
-    jobsList.innerHTML=remoteJobs.length?remoteJobs.map(j=>`<li><span class="badge remote">REMOTE</span><a href="${j.url}">${j.title}</a> @ ${j.company} <small>(${j.date})</small></li>`).join(''):'<li>Aucun job remote récent</li>';
-    {% assign recent_papers=site.papers | sort:"date" | reverse %}
-    const papers=[{% for p in recent_papers limit:10 %}{title:"{{ p.title | escape }}",url:"{{ p.url | relative_url }}",date:"{{ p.date }}"}{% unless forloop.last %},{% endunless %}{% endfor %}];
-    const recentPapers=papers.filter(p=>{const d=new Date(p.date);return d>=day7}).slice(0,7);
-    papersList.innerHTML=recentPapers.length?recentPapers.map(p=>`<li><a href="${p.url}">${p.title}</a> <small>(${p.date})</small></li>`).join(''):'<li>Aucun paper récent</li>';
-    const docs=await(await fetch("{{ '/assets/search.json' | relative_url }}")).json();
-    const idx=lunr(function(){this.ref('id');this.field('title');this.field('content');this.field('tags');docs.forEach(d=>this.add(d),this)});
-    const list=document.getElementById("results"),q=document.getElementById("q");
-    function render(items){list.innerHTML=items.slice(0,20).map(id=>{const d=docs.find(x=>x.id===id.ref);return d?`<li><a href="${d.url}">${d.title}</a></li>`:''}).join("")}
-    q.addEventListener("input",e=>{const v=e.target.value.trim();if(!v){list.innerHTML="";return}try{render(idx.search(v))}catch{list.innerHTML="<li>Erreur de recherche</li>"}});
-  })();
-  </script>
-</body>
-</html>
+<header style="margin-bottom:2rem;">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</header>
+
+<!-- Bouton Sponsor bien visible sur la home -->
+<div style="margin:1rem 0;text-align:center;">
+  <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener"
+     style="display:inline-block;background:#0a66ff;color:#fff;padding:.7rem 1.2rem;border-radius:6px;text-decoration:none;font-weight:600;font-size:1.05rem;">
+    Sponsoriser via Stripe
+  </a>
+  <span style="margin-left:.75rem;"><a href="/sponsor/">Infos</a></span>
+</div>
+
+<hr style="margin:2rem 0;">
+
+<h2>Dernières publications</h2>
+
+{% assign all_items = "" | split: "" %}
+{% if site.collections['advisories'] %}{% assign all_items = all_items | concat: site.advisories %}{% endif %}
+{% if site.collections['weekly'] %}{% assign all_items = all_items | concat: site.weekly %}{% endif %}
+{% if site.collections['posts'] %}{% assign all_items = all_items | concat: site.posts %}{% endif %}
+{% if site.collections['papers'] %}{% assign all_items = all_items | concat: site.papers %}{% endif %}
+{% if site.collections['outages'] %}{% assign all_items = all_items | concat: site.outages %}{% endif %}
+{% if site.collections['cve'] %}{% assign all_items = all_items | concat: site.cve %}{% endif %}
+
+{% if all_items.size > 0 %}
+  {% assign sorted_items = all_items | sort: 'date' | reverse %}
+  <ul style="list-style:none;padding:0;">
+    {% for item in sorted_items limit:20 %}
+      <li style="margin:.5rem 0;padding:.5rem;border-bottom:1px solid var(--border);">
+        <a href="{{ item.url | relative_url }}" style="color:var(--link);text-decoration:none;font-weight:600;">{{ item.title }}</a>
+        {% if item.date %}<span style="color:var(--muted);font-size:.85rem;margin-left:.5rem;">{{ item.date | date: "%d %b %Y" }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+  <p style="text-align:center;margin-top:1rem;"><a href="/feed.xml">Flux RSS</a> · <a href="{{ '/weekly/' | relative_url }}">Weekly</a> · <a href="{{ '/advisories/' | relative_url }}">Advisories</a></p>
+{% else %}
+  <p style="color:var(--muted);text-align:center;padding:2rem;">Aucun contenu pour l’instant. Le site se met à jour automatiquement chaque jour.</p>
+{% endif %}
