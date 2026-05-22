@@ -1,0 +1,23 @@
+---
+title: "GHSA-j7w6-vpvq-j3gm — PyPI diffusers"
+date: "2026-05-07"
+layout: post
+category: "advisory"
+osv_id: "GHSA-j7w6-vpvq-j3gm"
+ecosystem: "PyPI"
+packages: ["diffusers"]
+cvss: 0
+links: ["https://github.com/huggingface/diffusers/security/advisories/GHSA-j7w6-vpvq-j3gm", "https://nvd.nist.gov/vuln/detail/CVE-2026-44827", "https://github.com/huggingface/diffusers/pull/13448", "https://github.com/huggingface/diffusers/commit/a37f6f8394ac2a7ee8360c3abea811efe54512b1", "https://github.com/huggingface/diffusers", "https://github.com/huggingface/diffusers/releases/tag/v0.38.0"]
+tags: ["pypi"]
+---
+
+Diffusers has a `trust_remote_code` bypass via `custom_pipeline` and local custom components
+
+## References
+- https://github.com/huggingface/diffusers/security/advisories/GHSA-j7w6-vpvq-j3gm
+- https://nvd.nist.gov/vuln/detail/CVE-2026-44827
+- https://github.com/huggingface/diffusers/pull/13448
+- https://github.com/huggingface/diffusers/commit/a37f6f8394ac2a7ee8360c3abea811efe54512b1
+- https://github.com/huggingface/diffusers
+- https://github.com/huggingface/diffusers/releases/tag/v0.38.0
+
