@@ -36,7 +36,7 @@
 {% if site.stripe_payment_link %}
 
 <div class="sponsor-cta" style="margin:1rem 0;padding:0.75rem;border:1px solid #eee;background:#fafafa;text-align:center;"> <strong>Soutenez OpsIntel</strong> — <a href="{{ site.stripe_payment_link }}" target="_blank" rel="noopener">Sponsoriser (Stripe)</a> — <a href="/sponsor/">Infos</a> </div> {% endif %}
-<body>
+{% if site.buttondown_username %}<div style="margin:2rem 0;padding:1rem;border:1px solid #ddd;border-radius:6px;"><h3 style="margin-top:0;">📬 Recevoir le digest</h3><form action="https://buttondown.email/api/emails/embed-subscribe/{{ site.buttondown_username }}" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/{{ site.buttondown_username }}','popupwindow')" style="display:flex;gap:.5rem;flex-wrap:wrap;"><input type="email" name="email" placeholder="Votre email" required style="flex:1;min-width:220px;padding:.5rem;border:1px solid #ddd;border-radius:4px;"><button type="submit" style="background:#0a66ff;color:#fff;border:none;padding:.5rem 1rem;border-radius:4px;font-weight:600;cursor:pointer;">S'abonner</button></form></div>{% endif %} <body>
   <header>
     <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
     <p>{{ site.description }}</p>
