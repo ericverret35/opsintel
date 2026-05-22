@@ -13,6 +13,6 @@ stripe_payment_link: "https://buy.stripe.com/fZudR91sx3Q3dMWeG13ZK00"
 contact_email: "eric35@hotmail.ca"
 
 # Leave blank if you don't have these integrations yet.
-ethicalads_publishe:
-newsletter_url:
-telegram_url:
+ethicalads_publisher: ""
+newsletter_url: ""
+telegram_url: ""
