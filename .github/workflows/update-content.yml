@@ -40,7 +40,6 @@ jobs:
           for s in \
             fetch_arxiv.py \
             fetch_bugbounty.py \
-            fetch_conferences.py \
             fetch_ctf.py \
             fetch_cves.py \
             fetch_github_trending.py \
