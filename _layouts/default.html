@@ -82,5 +82,7 @@
       if(!saved)mql.addEventListener('change',e=>setTheme(e.matches?'dark':'light',false));
     })();
   </script>
-</body>
+{% if site.goatcounter_site != "" %} 
+  <script data-goatcounter="https://qcss.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script></body> {% endif %}
 </html>
