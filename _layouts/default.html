@@ -84,5 +84,7 @@
   </script>
 {% if site.goatcounter_site != "" %} 
   <script data-goatcounter="https://qcss.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script></body> {% endif %}
+        async src="//gc.zgo.at/count.js"></script> {% if site.buttondown_username != "" %}
+
+<div style="margin:2rem 0;padding:1rem;border:1px solid #ddd;text-align:center;"> <strong>Recevez le digest chaque semaine</strong> <form action="https://buttondown.email/api/emails/embed-subscribe/{{ site.buttondown_username }}" method="post" target="popupwindow" style="margin-top:.5rem;"> <input type="email" name="email" placeholder="Votre email" required style="padding:.4rem;min-width:220px;"> <button type="submit" style="padding:.4rem .8rem;background:#0a66ff;color:#fff;border:none;border-radius:4px;cursor:pointer;">S'abonner</button> </form> </div> {% endif %} </body> {% endif %}
 </html>
