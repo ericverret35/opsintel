@@ -3,6 +3,7 @@ description: "Security/devops automated: CVEs, K8s releases, GitHub trending, jo
 url: "https://ericverret35.github.io"
 baseurl: "/opsintel"
 timezone: "UTC"
+
 {% if site.bmc_username != "" %}
 <a href="https://buymeacoffee.com/{{ site.buymeacoffee.com/SsQc }}">Buy me a coffee</a>
 {% endif %}
