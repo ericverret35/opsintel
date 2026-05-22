@@ -58,14 +58,16 @@
     </nav>
   </header>
   <main>
-    <div data-ea-publisher="YOUR_ETHICALADS_ID" data-ea-type="text" style="margin:1em 0"></div>
+  {% if site.ethicalads_publisher != "" %} 
+    <div data-ea-publisher="{{ site.ethicalads_publisher }}" data-ea-type="text"></div> {% endif %}
     {{ content }}
     <hr style="margin:2em 0">
-    <div data-ea-publisher="YOUR_ETHICALADS_ID" data-ea-type="image"></div>
+    {% if site.ethicalads_publisher != "" %}
+    <div data-ea-publisher="{{ site.ethicalads_publisher }}" data-ea-type="text"></div> {% endif %}
     <p style="font-size:.9em">
-      📬 Newsletter: <a href="https://YOUR-MAILERLITE-LINK">Abonnez-vous</a> ·
-      📢 Telegram: <a href="https://t.me/YOUR-CHANNEL">@your_channel</a>
-    </p>
+      📬 Newsletter: {% if site.newsletter_url != "" %}
+     <a href="{{ site.newsletter_url }}">Abonnez-vous</a> {% endif %}
+      📢 Telegram: </p>{% if site.telegram_url != "" %} <a href="{{ site.telegram_url }}">Telegram</a> {% endif %}
   </main>
   <footer style="margin-top:3em;padding:1em 0;border-top:1px solid #ddd">
     <small>© {{ "now" | date: "%Y" }} OpsIntel Network · 12 niches · 100% automatisé · Pubs & affiliés présents</small>
