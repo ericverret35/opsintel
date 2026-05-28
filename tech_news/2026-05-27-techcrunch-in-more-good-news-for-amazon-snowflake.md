@@ -1,0 +1,20 @@
+---
+layout: post
+title: In more good news for Amazon, Snowflake signs $6B deal with AWS for AI CPU
+  chips
+date: '2026-05-27'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/
+tags:
+- tech-news
+- techcrunch
+---
+
+## In more good news for Amazon, Snowflake signs $6B deal with AWS for AI CPU chips
+
+**Source**: TechCrunch
+
+Snowflake has signed a new, enormous five-year deal with Amazon to secure chips for AI usage. Nvidia is once again being put on notice.
+
+**Lien**: [Lire](https://techcrunch.com/2026/05/27/in-more-good-news-for-amazon-snowflake-signs-6b-deal-with-aws-for-ai-cpu-chips/)
