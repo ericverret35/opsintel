@@ -1,0 +1,19 @@
+---
+layout: post
+title: Quick commerce FirstClub doubles valuation to $255M in nine months
+date: '2026-06-04'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/06/03/firstclub-doubles-valuation-to-255m-in-nine-months-on-quality-first-grocery-bet/
+tags:
+- tech-news
+- techcrunch
+---
+
+## Quick commerce FirstClub doubles valuation to $255M in nine months
+
+**Source**: TechCrunch
+
+The Bengaluru startup has crossed 1 million orders and reached a $50 million annualized GMV run rate within a year of launch.
+
+**Lien**: [Lire](https://techcrunch.com/2026/06/03/firstclub-doubles-valuation-to-255m-in-nine-months-on-quality-first-grocery-bet/)
