@@ -1,0 +1,27 @@
+---
+title: "GHSA-vwmf-pq79-vjvx — PyPI langflow"
+date: "2026-03-17"
+layout: post
+category: "advisory"
+osv_id: "GHSA-vwmf-pq79-vjvx"
+ecosystem: "PyPI"
+packages: ["langflow"]
+cvss: 0
+links: ["https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx", "https://nvd.nist.gov/vuln/detail/CVE-2026-33017", "https://github.com/langflow-ai/langflow/issues/12345", "https://github.com/langflow-ai/langflow/pull/12160", "https://github.com/langflow-ai/langflow/commit/73b6612e3ef25fdae0a752d75b0fabd47328d4f0", "https://github.com/advisories/GHSA-rvqx-wpfh-mfx7", "https://github.com/langflow-ai/langflow", "https://github.com/langflow-ai/langflow/releases/tag/1.8.2", "https://medium.com/@aviral23/cve-2026-33017-how-i-found-an-unauthenticated-rce-in-langflow-by-reading-the-code-they-already-dc96cdce5896", "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-33017", "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2026-33017", "https://www.sysdig.com/blog/cve-2026-33017-how-attackers-compromised-langflow-ai-pipelines-in-20-hours"]
+tags: ["pypi"]
+---
+
+Unauthenticated Remote Code Execution in Langflow via Public Flow Build Endpoint
+
+## References
+- https://github.com/langflow-ai/langflow/security/advisories/GHSA-vwmf-pq79-vjvx
+- https://nvd.nist.gov/vuln/detail/CVE-2026-33017
+- https://github.com/langflow-ai/langflow/issues/12345
+- https://github.com/langflow-ai/langflow/pull/12160
+- https://github.com/langflow-ai/langflow/commit/73b6612e3ef25fdae0a752d75b0fabd47328d4f0
+- https://github.com/advisories/GHSA-rvqx-wpfh-mfx7
+- https://github.com/langflow-ai/langflow
+- https://github.com/langflow-ai/langflow/releases/tag/1.8.2
+- https://medium.com/@aviral23/cve-2026-33017-how-i-found-an-unauthenticated-rce-in-langflow-by-reading-the-code-they-already-dc96cdce5896
+- https://www.cisa.gov/known-exploited-vulnerabilities-catalog?field_cve=CVE-2025-33017
+
