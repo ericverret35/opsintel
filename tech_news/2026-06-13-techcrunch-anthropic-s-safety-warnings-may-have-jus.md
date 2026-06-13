@@ -1,0 +1,20 @@
+---
+layout: post
+title: Anthropic’s safety warnings may have just backfired — the government has pulled
+  the plug on its most powerful AI
+date: '2026-06-13'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/
+tags:
+- tech-news
+- techcrunch
+---
+
+## Anthropic’s safety warnings may have just backfired — the government has pulled the plug on its most powerful AI
+
+**Source**: TechCrunch
+
+Anthropic isn't hiding its frustration. "We disagree that the finding of a narrow potential jailbreak should be cause for recalling a commercial model deployed to hundreds of millions of people," the company wrote in a blog post.
+
+**Lien**: [Lire](https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/)
