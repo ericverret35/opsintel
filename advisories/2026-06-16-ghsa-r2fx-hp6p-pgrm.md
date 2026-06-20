@@ -1,0 +1,20 @@
+---
+title: "GHSA-r2fx-hp6p-pgrm — npm openclaw"
+date: "2026-06-16"
+layout: post
+category: "advisory"
+osv_id: "GHSA-r2fx-hp6p-pgrm"
+ecosystem: "npm"
+packages: ["openclaw"]
+cvss: 0
+links: ["https://github.com/openclaw/openclaw/security/advisories/GHSA-4hpg-mp64-x7xq", "https://nvd.nist.gov/vuln/detail/CVE-2026-53854", "https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-ownerallowfrom-wildcard-inheritance-in-internal-webchat-commands"]
+tags: ["npm"]
+---
+
+Duplicate Advisory: Internal/webchat command auth could inherit ownerAllowFrom wildcard state
+
+## References
+- https://github.com/openclaw/openclaw/security/advisories/GHSA-4hpg-mp64-x7xq
+- https://nvd.nist.gov/vuln/detail/CVE-2026-53854
+- https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-ownerallowfrom-wildcard-inheritance-in-internal-webchat-commands
+
