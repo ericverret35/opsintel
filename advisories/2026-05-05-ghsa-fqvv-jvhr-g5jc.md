@@ -1,0 +1,21 @@
+---
+title: "GHSA-fqvv-jvhr-g5jc — PyPI firefighter-incident"
+date: "2026-05-05"
+layout: post
+category: "advisory"
+osv_id: "GHSA-fqvv-jvhr-g5jc"
+ecosystem: "PyPI"
+packages: ["firefighter-incident"]
+cvss: 0
+links: ["https://github.com/ManoManoTech/firefighter-incident/security/advisories/GHSA-fqvv-jvhr-g5jc", "https://nvd.nist.gov/vuln/detail/CVE-2026-42864", "https://github.com/ManoManoTech/firefighter-incident/commit/2586679e6f32c12d223668b73e98f4c4de7b771f", "https://github.com/ManoManoTech/firefighter-incident"]
+tags: ["pypi"]
+---
+
+FireFighter has unauthenticated SSRF in its Raid jira_bot endpoint that allows IAM credential theft
+
+## References
+- https://github.com/ManoManoTech/firefighter-incident/security/advisories/GHSA-fqvv-jvhr-g5jc
+- https://nvd.nist.gov/vuln/detail/CVE-2026-42864
+- https://github.com/ManoManoTech/firefighter-incident/commit/2586679e6f32c12d223668b73e98f4c4de7b771f
+- https://github.com/ManoManoTech/firefighter-incident
+

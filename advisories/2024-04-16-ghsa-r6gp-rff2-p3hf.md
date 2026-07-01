@@ -1,0 +1,22 @@
+---
+title: "GHSA-r6gp-rff2-p3hf — PyPI llama-index-core"
+date: "2024-04-16"
+layout: post
+category: "advisory"
+osv_id: "GHSA-r6gp-rff2-p3hf"
+ecosystem: "PyPI"
+packages: ["llama-index-core"]
+cvss: 0
+links: ["https://nvd.nist.gov/vuln/detail/CVE-2024-3271", "https://github.com/run-llama/llama_index/commit/2c92e88838a5f481d50840240b1dd3180066c6f5", "https://github.com/run-llama/llama_index/commit/5fbcb5a8b9f20f81b791c7fc8849e352613ab475", "https://github.com/run-llama/llama_index", "https://huntr.com/bounties/9b32490e-7cf9-470e-8d49-ba083ae7a279"]
+tags: ["pypi"]
+---
+
+llama-index-core Command Injection vulnerability
+
+## References
+- https://nvd.nist.gov/vuln/detail/CVE-2024-3271
+- https://github.com/run-llama/llama_index/commit/2c92e88838a5f481d50840240b1dd3180066c6f5
+- https://github.com/run-llama/llama_index/commit/5fbcb5a8b9f20f81b791c7fc8849e352613ab475
+- https://github.com/run-llama/llama_index
+- https://huntr.com/bounties/9b32490e-7cf9-470e-8d49-ba083ae7a279
+
