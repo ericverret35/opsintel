@@ -1,0 +1,26 @@
+---
+title: "GHSA-7hjm-hqgj-xv9f — PyPI moin"
+date: "2022-05-02"
+layout: post
+category: "advisory"
+osv_id: "GHSA-7hjm-hqgj-xv9f"
+ecosystem: "PyPI"
+packages: ["moin"]
+links: ["https://nvd.nist.gov/vuln/detail/CVE-2009-0260", "https://exchange.xforce.ibmcloud.com/vulnerabilities/48126", "https://usn.ubuntu.com/716-1", "https://web.archive.org/web/20200228171520/http://hg.moinmo.in/moin/1.8/rev/8cb4d34ccbc1", "https://www.debian.org/security/2009/dsa-1715", "http://moinmo.in/SecurityFixes#moin1.8.1", "http://osvdb.org/51485", "http://secunia.com/advisories/33593", "http://secunia.com/advisories/33716", "http://secunia.com/advisories/33755", "http://www.securityfocus.com/archive/1/500197/100/0/threaded", "http://www.securityfocus.com/bid/33365", "http://www.vupen.com/english/advisories/2009/0195"]
+tags: ["pypi"]
+---
+
+MoinMoin Multiple cross-site scripting (XSS) vulnerabilities
+
+## References
+- https://nvd.nist.gov/vuln/detail/CVE-2009-0260
+- https://exchange.xforce.ibmcloud.com/vulnerabilities/48126
+- https://usn.ubuntu.com/716-1
+- https://web.archive.org/web/20200228171520/http://hg.moinmo.in/moin/1.8/rev/8cb4d34ccbc1
+- https://www.debian.org/security/2009/dsa-1715
+- http://moinmo.in/SecurityFixes#moin1.8.1
+- http://osvdb.org/51485
+- http://secunia.com/advisories/33593
+- http://secunia.com/advisories/33716
+- http://secunia.com/advisories/33755
+

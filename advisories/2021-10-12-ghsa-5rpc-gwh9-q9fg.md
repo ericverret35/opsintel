@@ -1,0 +1,24 @@
+---
+title: "GHSA-5rpc-gwh9-q9fg — PyPI opencv-python"
+date: "2021-10-12"
+layout: post
+category: "advisory"
+osv_id: "GHSA-5rpc-gwh9-q9fg"
+ecosystem: "PyPI"
+packages: ["opencv-python", "opencv-contrib-python"]
+cvss: 0
+links: ["https://nvd.nist.gov/vuln/detail/CVE-2017-12862", "https://github.com/opencv/opencv/issues/9370", "https://github.com/opencv/opencv/pull/9376", "https://github.com/opencv/opencv-python", "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html", "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html", "https://security.gentoo.org/glsa/201712-02"]
+tags: ["pypi"]
+---
+
+Improper Restriction of Operations within the Bounds of a Memory Buffer in OpenCV
+
+## References
+- https://nvd.nist.gov/vuln/detail/CVE-2017-12862
+- https://github.com/opencv/opencv/issues/9370
+- https://github.com/opencv/opencv/pull/9376
+- https://github.com/opencv/opencv-python
+- https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html
+- https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html
+- https://security.gentoo.org/glsa/201712-02
+
