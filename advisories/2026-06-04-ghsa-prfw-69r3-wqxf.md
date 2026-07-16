@@ -1,0 +1,27 @@
+---
+title: "GHSA-prfw-69r3-wqxf — PyPI ms-swift"
+date: "2026-06-04"
+layout: post
+category: "advisory"
+osv_id: "GHSA-prfw-69r3-wqxf"
+ecosystem: "PyPI"
+packages: ["ms-swift"]
+cvss: 0
+links: ["https://nvd.nist.gov/vuln/detail/CVE-2026-10801", "https://github.com/modelscope/ms-swift/issues/9360", "https://github.com/modelscope/ms-swift/pull/9359", "https://github.com/modelscope/ms-swift/commit/27426a6431759a82e2a1c98344b425f90be17e07", "https://github.com/modelscope/ms-swift", "https://vuldb.com/cve/CVE-2026-10801", "https://vuldb.com/submit/831455", "https://vuldb.com/submit/831456", "https://vuldb.com/vuln/368250", "https://vuldb.com/vuln/368250/cti"]
+tags: ["pypi"]
+---
+
+ms-swift: Image Cache Hash Collision via Missing Dimension Metadata
+
+## References
+- https://nvd.nist.gov/vuln/detail/CVE-2026-10801
+- https://github.com/modelscope/ms-swift/issues/9360
+- https://github.com/modelscope/ms-swift/pull/9359
+- https://github.com/modelscope/ms-swift/commit/27426a6431759a82e2a1c98344b425f90be17e07
+- https://github.com/modelscope/ms-swift
+- https://vuldb.com/cve/CVE-2026-10801
+- https://vuldb.com/submit/831455
+- https://vuldb.com/submit/831456
+- https://vuldb.com/vuln/368250
+- https://vuldb.com/vuln/368250/cti
+
