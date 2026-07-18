@@ -1,0 +1,19 @@
+---
+layout: post
+title: Apple and Google ordered to purge ‘nudify’ apps from App Stores
+date: '2026-07-17'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/
+tags:
+- tech-news
+- techcrunch
+---
+
+## Apple and Google ordered to purge ‘nudify’ apps from App Stores
+
+**Source**: TechCrunch
+
+In letters sent to Apple and Google, San Francisco City Attorney David Chiu said that both companies have long been aware that they are hosting apps in violation of state law.
+
+**Lien**: [Lire](https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/)
