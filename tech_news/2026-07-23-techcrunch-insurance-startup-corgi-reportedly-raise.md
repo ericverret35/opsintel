@@ -1,0 +1,20 @@
+---
+layout: post
+title: Insurance startup Corgi reportedly raised more money at $4B — its third round
+  in 8 weeks
+date: '2026-07-23'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/07/23/insurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks/
+tags:
+- tech-news
+- techcrunch
+---
+
+## Insurance startup Corgi reportedly raised more money at $4B — its third round in 8 weeks
+
+**Source**: TechCrunch
+
+In the AI-funding frenzy, many startups are raising back-to-back rounds at ever-increasing valuations — but even by those standards, Corgi stands out.
+
+**Lien**: [Lire](https://techcrunch.com/2026/07/23/insurance-startup-corgi-reportedly-raised-more-money-at-4b-its-third-round-in-eight-weeks/)
