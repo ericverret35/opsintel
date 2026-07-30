@@ -1,0 +1,22 @@
+---
+title: "GHSA-jrmc-qg6p-94fp — Maven org.verapdf:parser"
+date: "2026-07-29"
+layout: post
+category: "advisory"
+osv_id: "GHSA-jrmc-qg6p-94fp"
+ecosystem: "Maven"
+packages: ["org.verapdf:parser", "org.verapdf:parser"]
+cvss: 0
+links: ["https://github.com/veraPDF/veraPDF-parser/security/advisories/GHSA-jrmc-qg6p-94fp", "https://github.com/veraPDF/veraPDF-parser/pull/703", "https://github.com/veraPDF/veraPDF-parser/commit/73d6ec002b98ce1f3f68640442f8e5d5613c80ce", "https://github.com/veraPDF/veraPDF-parser/commit/cb3538607a549d63504299be1088c85ae48605f4", "https://github.com/veraPDF/veraPDF-parser"]
+tags: ["maven"]
+---
+
+veraPDF Parser DoS via PostScript CMap Streams
+
+## References
+- https://github.com/veraPDF/veraPDF-parser/security/advisories/GHSA-jrmc-qg6p-94fp
+- https://github.com/veraPDF/veraPDF-parser/pull/703
+- https://github.com/veraPDF/veraPDF-parser/commit/73d6ec002b98ce1f3f68640442f8e5d5613c80ce
+- https://github.com/veraPDF/veraPDF-parser/commit/cb3538607a549d63504299be1088c85ae48605f4
+- https://github.com/veraPDF/veraPDF-parser
+
