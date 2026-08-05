@@ -1,0 +1,19 @@
+---
+layout: post
+title: SpaceX doubles revenue on Anthropic and Google compute deals, Starlink growth
+date: '2026-08-04'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/08/04/spacex-doubles-revenues-on-anthropic-and-google-compute-deals-starlink-growth/
+tags:
+- tech-news
+- techcrunch
+---
+
+## SpaceX doubles revenue on Anthropic and Google compute deals, Starlink growth
+
+**Source**: TechCrunch
+
+SpaceX doubled its revenue compared to last year, according to its first quarterly earnings since going public in June.
+
+**Lien**: [Lire](https://techcrunch.com/2026/08/04/spacex-doubles-revenues-on-anthropic-and-google-compute-deals-starlink-growth/)
