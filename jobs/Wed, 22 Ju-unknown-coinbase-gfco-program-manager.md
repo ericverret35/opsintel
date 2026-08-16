@@ -1,0 +1,35 @@
+---
+layout: post
+title: 'Coinbase: GFCO Program Manager @ Unknown 🏠 Remote'
+date: Wed, 22 Ju
+category: jobs
+company: Unknown
+url: https://weworkremotely.com/remote-jobs/coinbase-gfco-program-manager
+remote: true
+tags:
+- jobs
+- remote
+- weworkremotely
+- go
+- aws
+- data
+- ml
+- ai
+- api
+---
+
+## Coinbase: GFCO Program Manager
+
+**Entreprise**: Unknown
+**Remote**: Oui 🏠
+**Source**: WeWorkRemotely
+
+### Description
+
+Headquarters:  Remote - USA
+ 
+
+  Ready to do the most impactful work of your career? At&nbsp; Coinbase , we are uncompromising on our mission to increase economic freedom. The bar is high, the environment is intense, and we like it that way. This isn't a place for complacency, it’s a place to be pushed past your perceived limits. If you're ready to build the future of finance alongside people who refuse to settle for "good enough," you belong here. Coinbase is a remote-first, but not remote-only company. Expect to get together quarterly for intense in-person working sessions called “surges.”&nbsp; learn more about working at Coinbase .    Team/Role Overview  
+ The GFCO Programs team is the end-to-end DRI for the financial crimes compliance operations experience and automation across Coinba
+
+👉 [Voir l'offre](https://weworkremotely.com/remote-jobs/coinbase-gfco-program-manager)
