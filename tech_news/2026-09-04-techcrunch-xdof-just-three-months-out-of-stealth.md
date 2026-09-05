@@ -1,0 +1,20 @@
+---
+layout: post
+title: XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B
+  valuation
+date: '2026-09-04'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/
+tags:
+- tech-news
+- techcrunch
+---
+
+## XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation
+
+**Source**: TechCrunch
+
+The round is being raised just months after the robot data startup exited from stealth.
+
+**Lien**: [Lire](https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/)
