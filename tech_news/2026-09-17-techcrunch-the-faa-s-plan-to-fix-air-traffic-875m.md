@@ -1,0 +1,19 @@
+---
+layout: post
+title: The FAA’s plan to fix air traffic? $875M worth of AI
+date: '2026-09-17'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/
+tags:
+- tech-news
+- techcrunch
+---
+
+## The FAA’s plan to fix air traffic? $875M worth of AI
+
+**Source**: TechCrunch
+
+A new AI-based software program is being launched to help air traffic controllers better navigate their jobs as the crossing guards of America's skies.
+
+**Lien**: [Lire](https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai/)
