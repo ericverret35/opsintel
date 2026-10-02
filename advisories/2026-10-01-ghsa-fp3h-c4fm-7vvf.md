@@ -1,0 +1,23 @@
+---
+title: "GHSA-fp3h-c4fm-7vvf — PyPI pypdf"
+date: "2026-10-01"
+layout: post
+category: "advisory"
+osv_id: "GHSA-fp3h-c4fm-7vvf"
+ecosystem: "PyPI"
+packages: ["pypdf"]
+cvss: 0
+links: ["https://github.com/py-pdf/pypdf/security/advisories/GHSA-fp3h-c4fm-7vvf", "https://nvd.nist.gov/vuln/detail/CVE-2026-102995", "https://github.com/py-pdf/pypdf/pull/4071", "https://github.com/py-pdf/pypdf/commit/319d0b823ce2c311a2435e9fd93c13994d32bb51", "https://github.com/py-pdf/pypdf", "https://github.com/py-pdf/pypdf/releases/tag/6.18.1"]
+tags: ["pypi"]
+---
+
+pypdf: Possible large memory usage for large /ToUnicode streams (Follow-up 2)
+
+## References
+- https://github.com/py-pdf/pypdf/security/advisories/GHSA-fp3h-c4fm-7vvf
+- https://nvd.nist.gov/vuln/detail/CVE-2026-102995
+- https://github.com/py-pdf/pypdf/pull/4071
+- https://github.com/py-pdf/pypdf/commit/319d0b823ce2c311a2435e9fd93c13994d32bb51
+- https://github.com/py-pdf/pypdf
+- https://github.com/py-pdf/pypdf/releases/tag/6.18.1
+
