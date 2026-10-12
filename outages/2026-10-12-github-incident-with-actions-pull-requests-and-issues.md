@@ -1,0 +1,15 @@
+---
+layout: post
+title: Incident with Actions, Pull Requests and Issues
+date: '2026-10-12'
+vendor: GitHub
+severity: partial
+link: https://www.githubstatus.com/incidents/93njd414rpbx
+tags:
+- github
+- partial
+---
+
+<p> <small>Oct <var>12</var>, <var>14:37</var> UTC</small><br /> <strong>Update</strong> - We have mitigated the issues with Actions, issues, and projects, and have a mitigation in progress to address the delay with notifications. </p> <p> <small>Oct <var>12</var>, <var>14:36</var> UTC</small><br /> <strong>Update</strong> - The degradation affecting Actions has been mitigated. We are monitoring to ensure stability. </p> <p> <small>Oct <var>12</var>, <var>14:35</var> UTC</small><br /> <strong>Update</strong> - The degradation affecting Issues has been mitigated. We are monitoring to ensure stability. </p> <p> <small>Oct <var>12</var>, <var>13:38</var> UTC</small><br /> <strong>Update</strong> - Our initial mitigation was not fully successful, and users may still experience delays and errors with Actions, issues and projects, and notifications are delayed. We're continuing to investigate the root cause and work on additional mitigations. </p> <p> <small>Oct <var>12</var>, <var>13:02</var> UTC</small><br /> <strong>Update</strong> - Pull Requests is operating normally. </p> <p> <small>Oct <var>12</var>, <var>12:57</var> UTC</small><br /> <strong>Update</strong> - We have a mitigation in progress and are monitoring for recovery. Users may also experience delayed web notifications as we mitigate. </p> <p> <small>Oct <var>12</var>, <var>12:33</var> UTC</small><br /> <strong>Update</strong> - Users may experience issues loading the Actions tab UI, interacting with the Checks API, queueing new Actions runs, creating and updating issues, and requesting PR reviews, including via REST and GraphQL APIs. </p> <p> <small>Oct <var>12</var>, <var>12:21</var> UTC</small><br /> <strong>Investigating</strong> - We are investigating reports of degraded performance for Actions, Issues and Pull Requests </p>
+
+More details: https://www.githubstatus.com/incidents/93njd414rpbx

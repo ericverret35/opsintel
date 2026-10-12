@@ -1,0 +1,20 @@
+---
+layout: post
+title: 48 hours to TechCrunch Disrupt 2026 — hear directly from the people building
+  what’s next
+date: '2026-10-11'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/
+tags:
+- tech-news
+- techcrunch
+---
+
+## 48 hours to TechCrunch Disrupt 2026 — hear directly from the people building what’s next
+
+**Source**: TechCrunch
+
+Less than 48 hours, TechCrunch Disrupt 2026 starts in San Francisco’s Moscone West. Save up to $100 on your pass before prices increase at the door, plus get 50% on a second pass. Or score other deals.
+
+**Lien**: [Lire](https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/)
