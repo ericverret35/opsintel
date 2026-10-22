@@ -1,0 +1,23 @@
+---
+title: "GHSA-rw26-wwfc-9wvm — npm @apostrophecms/import-export"
+date: "2026-10-21"
+layout: post
+category: "advisory"
+osv_id: "GHSA-rw26-wwfc-9wvm"
+ecosystem: "npm"
+packages: ["@apostrophecms/import-export"]
+cvss: 0
+links: ["https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-rw26-wwfc-9wvm", "https://nvd.nist.gov/vuln/detail/CVE-2026-113648", "https://github.com/apostrophecms/apostrophe/commit/06e4b377f3c360f9e89c32dccd7e505ad5ddf498", "https://github.com/apostrophecms/apostrophe/commit/40b989b1a9dd23d30029b8ce7668634265cfe5ea", "https://github.com/apostrophecms/apostrophe", "https://github.com/apostrophecms/apostrophe/releases/tag/@apostrophecms/import-export@3.7.1"]
+tags: ["npm"]
+---
+
+ApostropheCMS: Missing Authentication in `cleanExport` Route
+
+## References
+- https://github.com/apostrophecms/apostrophe/security/advisories/GHSA-rw26-wwfc-9wvm
+- https://nvd.nist.gov/vuln/detail/CVE-2026-113648
+- https://github.com/apostrophecms/apostrophe/commit/06e4b377f3c360f9e89c32dccd7e505ad5ddf498
+- https://github.com/apostrophecms/apostrophe/commit/40b989b1a9dd23d30029b8ce7668634265cfe5ea
+- https://github.com/apostrophecms/apostrophe
+- https://github.com/apostrophecms/apostrophe/releases/tag/@apostrophecms/import-export@3.7.1
+
