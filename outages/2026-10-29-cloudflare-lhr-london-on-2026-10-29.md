@@ -1,0 +1,19 @@
+---
+layout: post
+title: LHR (London) on 2026-10-29
+date: '2026-10-29'
+vendor: Cloudflare
+severity: incident
+link: https://www.cloudflarestatus.com/incidents/cv5j76hgz6xl
+tags:
+- cloudflare
+- incident
+---
+
+<p><small>Oct <var>23</var>, <var>18:20</var> UTC</small><br /><strong>Scheduled</strong> - We will be performing scheduled maintenance in LHR (London) datacenter on 2026-10-29 between 02:00 and 05:00 UTC.
+
+Traffic might be re-routed from this location, hence there is a possibility of a slight increase in latency during this maintenance window for end-users in the affected region. For PNI / CNI customers connecting with us in this location, please make sure you are expecting this traffic to fail over elsewhere during this maintenance window as network interfaces in this datacentre may become temporarily unavailable.
+
+You can now subscribe to these notifications via Cloudflare dashboard and receive these updates directly via email, PagerDuty and webhooks (based on your plan): https://developers.cloudflare.com/notifications/notification-available/#cloudflare-status.</p>
+
+More details: https://www.cloudflarestatus.com/incidents/cv5j76hgz6xl
