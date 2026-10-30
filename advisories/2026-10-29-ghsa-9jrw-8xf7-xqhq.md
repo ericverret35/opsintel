@@ -1,0 +1,26 @@
+---
+title: "GHSA-9jrw-8xf7-xqhq — Maven org.keycloak:keycloak-services"
+date: "2026-10-29"
+layout: post
+category: "advisory"
+osv_id: "GHSA-9jrw-8xf7-xqhq"
+ecosystem: "Maven"
+packages: ["org.keycloak:keycloak-services"]
+cvss: 0
+links: ["https://github.com/keycloak/keycloak/security/advisories/GHSA-9jrw-8xf7-xqhq", "https://nvd.nist.gov/vuln/detail/CVE-2026-9083", "https://access.redhat.com/errata/RHSA-2026:30049", "https://access.redhat.com/errata/RHSA-2026:30050", "https://access.redhat.com/errata/RHSA-2026:30083", "https://access.redhat.com/errata/RHSA-2026:30084", "https://access.redhat.com/security/cve/CVE-2026-9083", "https://bugzilla.redhat.com/show_bug.cgi?id=2480168", "https://github.com/keycloak/keycloak"]
+tags: ["maven"]
+---
+
+Keycloak vulnerable to information disclosure through arbitrary filesystem path probing
+
+## References
+- https://github.com/keycloak/keycloak/security/advisories/GHSA-9jrw-8xf7-xqhq
+- https://nvd.nist.gov/vuln/detail/CVE-2026-9083
+- https://access.redhat.com/errata/RHSA-2026:30049
+- https://access.redhat.com/errata/RHSA-2026:30050
+- https://access.redhat.com/errata/RHSA-2026:30083
+- https://access.redhat.com/errata/RHSA-2026:30084
+- https://access.redhat.com/security/cve/CVE-2026-9083
+- https://bugzilla.redhat.com/show_bug.cgi?id=2480168
+- https://github.com/keycloak/keycloak
+
