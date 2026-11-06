@@ -1,0 +1,26 @@
+---
+title: "GHSA-mgqf-5mf5-prfj — Go github.com/gtsteffaniak/filebrowser/backend"
+date: "2026-10-27"
+layout: post
+category: "advisory"
+osv_id: "GHSA-mgqf-5mf5-prfj"
+ecosystem: "Go"
+packages: ["github.com/gtsteffaniak/filebrowser/backend"]
+cvss: 0
+links: ["https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-mgqf-5mf5-prfj", "https://nvd.nist.gov/vuln/detail/CVE-2026-116682", "https://github.com/gtsteffaniak/filebrowser/pull/2795", "https://github.com/gtsteffaniak/filebrowser/pull/2800", "https://github.com/gtsteffaniak/filebrowser/commit/3c8c02414eefd3351ffe437fa39ff6eb150ffa67", "https://github.com/gtsteffaniak/filebrowser/commit/4126edeb07a015c3809a89249b283e07a4e50c38", "https://github.com/gtsteffaniak/filebrowser", "https://github.com/gtsteffaniak/filebrowser/releases/tag/v1.5.2-stable", "https://github.com/gtsteffaniak/filebrowser/releases/tag/v2.0.1-beta"]
+tags: ["go"]
+---
+
+FileBrowser: Symlink following escapes user scope allowing arbitrary file read outside the served directory
+
+## References
+- https://github.com/gtsteffaniak/filebrowser/security/advisories/GHSA-mgqf-5mf5-prfj
+- https://nvd.nist.gov/vuln/detail/CVE-2026-116682
+- https://github.com/gtsteffaniak/filebrowser/pull/2795
+- https://github.com/gtsteffaniak/filebrowser/pull/2800
+- https://github.com/gtsteffaniak/filebrowser/commit/3c8c02414eefd3351ffe437fa39ff6eb150ffa67
+- https://github.com/gtsteffaniak/filebrowser/commit/4126edeb07a015c3809a89249b283e07a4e50c38
+- https://github.com/gtsteffaniak/filebrowser
+- https://github.com/gtsteffaniak/filebrowser/releases/tag/v1.5.2-stable
+- https://github.com/gtsteffaniak/filebrowser/releases/tag/v2.0.1-beta
+
