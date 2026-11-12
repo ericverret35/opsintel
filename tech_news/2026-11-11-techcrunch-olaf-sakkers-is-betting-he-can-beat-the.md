@@ -1,0 +1,19 @@
+---
+layout: post
+title: Olaf Sakkers is betting he can beat the emerging-manager squeeze
+date: '2026-11-11'
+category: tech-news
+source: TechCrunch
+url: https://techcrunch.com/2026/11/11/olaf-sakkers-is-betting-he-can-beat-the-emerging-manager-squeeze/
+tags:
+- tech-news
+- techcrunch
+---
+
+## Olaf Sakkers is betting he can beat the emerging-manager squeeze
+
+**Source**: TechCrunch
+
+Entering into the world of venture capital has never been easy, especially as a first-time fund manager. But it's especially daunting right now. Olaf Sakkers has spent the past five years proving that difficult doesn't mean impossible.
+
+**Lien**: [Lire](https://techcrunch.com/2026/11/11/olaf-sakkers-is-betting-he-can-beat-the-emerging-manager-squeeze/)
