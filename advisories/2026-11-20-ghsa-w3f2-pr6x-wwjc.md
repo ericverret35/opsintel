@@ -1,0 +1,25 @@
+---
+title: "GHSA-w3f2-pr6x-wwjc — Go github.com/git-lfs/git-lfs"
+date: "2026-11-20"
+layout: post
+category: "advisory"
+osv_id: "GHSA-w3f2-pr6x-wwjc"
+ecosystem: "Go"
+packages: ["github.com/git-lfs/git-lfs", "github.com/git-lfs/git-lfs/v3"]
+cvss: 0
+links: ["https://github.com/git-lfs/git-lfs/security/advisories/GHSA-w3f2-pr6x-wwjc", "https://nvd.nist.gov/vuln/detail/CVE-2026-69260", "https://github.com/git-lfs/git-lfs/commit/091a95a796739bd0b8f59d8deeea79a452959508", "https://github.com/git-lfs/git-lfs/commit/92d81117d465469a61dcb78546dd3d88806b25fd", "https://github.com/git-lfs/git-lfs/commit/af5f4579ac1155734bb08f00ca92b9e89f8b51df", "https://github.com/git-lfs/git-lfs/commit/d90ed66f2d465f8b3ba5fd6e4ac3c711c9e0a2d6", "https://github.com/git-lfs/git-lfs", "https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1"]
+tags: ["go"]
+---
+
+Git LFS may attempt arbitrary remote commands via crafted SSH URLs
+
+## References
+- https://github.com/git-lfs/git-lfs/security/advisories/GHSA-w3f2-pr6x-wwjc
+- https://nvd.nist.gov/vuln/detail/CVE-2026-69260
+- https://github.com/git-lfs/git-lfs/commit/091a95a796739bd0b8f59d8deeea79a452959508
+- https://github.com/git-lfs/git-lfs/commit/92d81117d465469a61dcb78546dd3d88806b25fd
+- https://github.com/git-lfs/git-lfs/commit/af5f4579ac1155734bb08f00ca92b9e89f8b51df
+- https://github.com/git-lfs/git-lfs/commit/d90ed66f2d465f8b3ba5fd6e4ac3c711c9e0a2d6
+- https://github.com/git-lfs/git-lfs
+- https://github.com/git-lfs/git-lfs/releases/tag/v3.8.1
+
